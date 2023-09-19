@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sınıf Listesi</title>
+  <style>
+    table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 80%;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+} 
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(189, 188, 188);
+}
+
+button:hover {
+    background-color: #72aed6;
+}
+  </style>
+</head>
+<body>
+<h1>Sınıf Listesi</h1>
+<table border="1">
+<thead>
+    <tr>
+        <th><button id="newStudent">Öğrenci Ekle</button></th>
+    </tr>
+<tr>
+    <th>İsim</th>
+    <th>Soyad</th>
+    <th>Sınıf</th>
+    <th>Not</th>
+    <th>+ / -</th>
+</tr> 
+</thead> 
+<tbody>
+<tr>
+    <td>Eftelya</td>
+    <td>Güler</td>
+    <td>11-A</td>
+    <td class="not">100</td>
+    <td>
+        <button onclick="tiklandi(this, '+')">+</button>
+        <button onclick="tiklandi(this, '-')">-</button>
+    </td>
+</tr>
+<tr>
+    <td>Defne</td>
+    <td>Can</td>
+    <td>11-A</td>
+    <td class="not">100</td>
+    <td>
+        <button onclick="tiklandi(this, '+')">+</button>
+        <button onclick="tiklandi(this, '-')">-</button> 
+    </td>
+</tr>
+<tr>
+    <td>Mehmet</td>
+    <td>Şimşek</td>
+    <td>11-A</td>
+    <td class="not">98</td>
+    <td>
+        <button onclick="tiklandi(this ,'+')">+</button>
+        <button onclick="tiklandi(this ,'-')">-</button>
+    </td>
+</tr>
+<tr>
+    <td>Ali</td>
+    <td>Karasu</td>
+    <td>11-A</td>
+    <td class="not">88</td>
+    <td>
+        <button onclick="tiklandi(this ,'+')">+</button>
+        <button onclick="tiklandi(this ,'-')">-</button>
+    </td>
+</tr>
+<tr>
+    <td>Ahmet</td>
+    <td>Ün</td>
+    <td>11-A</td>
+    <td class="not">85</td>
+    <td>
+        <button onclick="tiklandi(this ,'+')">+</button>
+        <button onclick="tiklandi(this ,'-')">-</button>
+    </td>
+</tr>
+<tr>
+    <td>Cevdet</td>
+    <td>Sezer</td>
+    <td>11-A</td>
+    <td class="not">84</td>
+    <td>
+        <button onclick="tiklandi(this ,'+')">+</button>
+        <button onclick="tiklandi(this ,'-')">-</button>
+    </td>
+</tr>
+<tr>
+    <td>Ayşe</td>
+    <td>Doğan</td>
+    <td>11-A</td>
+    <td class="not">78</td> 
+    <td>
+        <button onclick="tiklandi(this ,'+')">+</button>
+        <button onclick="tiklandi(this ,'-')">-</button>
+    </td>
+</tr>
+<tr>
+    <td>Melek</td>
+    <td>Coşar</td>
+    <td>11-A</td>
+    <td class="not">69</td>
+    <td>
+        <button onclick="tiklandi(this ,'+')">+</button>
+        <button onclick="tiklandi(this ,'-')">-</button>
+    </td>
+</tr>
+</tbody>  
+</table>
+
+<script>
+    //not arttırma azaltma
+function tiklandi(button, islem) {
+const satir = button.parentElement.parentElement;
+const notElement = satir.querySelector('.not');
+let not = Number(notElement.innerHTML);
+
+if (islem === '+') {
+    if (not < 100) {
+    not++;
+}
+} else if (islem === '-') {
+    if (not > 0) {
+    not--;
+}
+}
+
+notElement.innerHTML = not;
+}
+
+
+//yeni öğrenci tanımlama
+document.getElementById('newStudent').addEventListener('click', function() {
+    var tableBody = document.querySelector('table tbody');
+
+    tableBody.innerHTML += `
+    <tr>
+        <td contenteditable="true">Yeni Öğrenci Ad</td>
+        <td contenteditable="true">Yeni Öğrenci Soyad</td>
+        <td contenteditable="true">sınıf</td>
+        <td class="not" contenteditable="true">0</td>
+        <td>
+            <button onclick="tiklandi(this, '+')">+</button>
+            <button onclick="tiklandi(this, '-')">-</button>
+        </td>
+    </tr>
+    `;
+
+});
+</script>    
+</body>
+</html>

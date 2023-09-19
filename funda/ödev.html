@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        <title>ÖDEV</title>
+
+
+
+
+
+<style type="text/css">
+    .buton{
+        width:49%;
+        border-color:purple;
+    }
+   .ekle{
+        margin-left: 60px;
+        border-color: purple; 
+        text-align: center;  
+    }
+
+    .th {
+        background-color:#d8bfd8 ;
+        width: 20%;
+    }
+    .sonuc{
+        width: 97%;
+        text-align: center;
+        margin: auto;
+    }
+  
+
+    
+</style>
+    </head>
+    <body>
+
+ 
+
+        <div id="sayfa">            
+<table id="liste" border="1" width="100%" bordercolor="purple">
+        <tr>
+        <th class="th" id="ad">Öğrencinin adı</th>
+        <th class="th" id="soyad">Öğrencinin Soyadı</th>
+        <th class="th" id="sınıf">Öğrencinin Sınıfı</th>
+        <th class="th" id="not">Öğrencinin Notu</th>
+        <th class="th" id="degistir">+/-</th>
+        </tr>
+
+        <tr >
+        <td >Sema</td>
+        <td>Yılmaz</td>
+        <td>12/A</td>
+        <td> <input type="text" id="sonuc" class="sonuc" value="90"></td>
+       <td ><input class="buton" id="arttir" type=button onclick="arttir()" value="+">    <input  class="buton" id="azalt" type=button onclick="azalt()" value="-"></td>
+        </tr>
+
+        <tr >
+            <td >Ahmet</td>
+            <td>Şahin</td>
+            <td>12/B</td>
+            <td> <input type="text" class="sonuc" id="sonuc1" value="85"></td>
+           <td ><input class="buton" id="arttir1" type=button onclick="arttir1()" value="+">   <input  class="buton" id="azalt1" type=button onclick="azalt1()" value="-"></td>
+            </tr>
+
+            <tr >
+                <td >Selim</td>
+                <td>Güney</td>
+                <td>12/C</td>
+                <td> <input type="text" id="sonuc2" class="sonuc" value="95"></td>
+               <td ><input class="buton" id="arttir2" type=button onclick="arttir2()" value="+">    <input  class="buton" id="azalt2" type=button onclick="azalt2()" value="-"></td>
+                </tr>
+
+                <tr >
+                    <td >Aysu</td>
+                    <td>Yıldız</td>
+                    <td>12/A</td>
+                    <td> <input type="text" id="sonuc3" class="sonuc" value="85"></td>
+                   <td ><input class="buton" id="arttir3" type=button onclick="arttir3()" value="+">    <input  class="buton" id="azalt3" type=button onclick="azalt3()" value="-"></td>
+                    </tr>
+
+
+        <tr id="satir"></tr>
+        
+        <div id="sayfa">
+            <label>Ad:</label>    <input type="text"  id="ad">
+            <label>Soyad:</label> <input type="text"  id="soyad">
+            <label>Sınıf:</label>   <input type="text"  id="sınıf">
+            <label>Not:</label>    <input type="text"  id="not">
+            <label>:</label>    <input type="text"  id="degistir">
+            <button id="ekle">Tabloya Ekle</button>
+          
+<br><br>
+        </div>
+
+
+
+  
+<script type="text/javascript">
+               
+               function arttir(){
+         
+         var sonuc=document.getElementById("sonuc");
+         sonuc.value=Number(sonuc.value)+1;
+         }
+          
+         function azalt(){
+          
+         var sonuc=document.getElementById("sonuc");
+         sonuc.value=Number(sonuc.value)-1;
+         }
+
+         function arttir1(){
+         
+         var sonuc=document.getElementById("sonuc1");
+         sonuc.value=Number(sonuc.value)+1;
+         }
+          
+         function azalt1(){
+          
+         var sonuc=document.getElementById("sonuc1");
+         sonuc.value=Number(sonuc.value)-1;
+         }
+
+         function arttir2(){
+         
+         var sonuc=document.getElementById("sonuc2");
+         sonuc.value=Number(sonuc.value)+1;
+         }
+          
+         function azalt2(){
+          
+         var sonuc=document.getElementById("sonuc2");
+         sonuc.value=Number(sonuc.value)-1;
+         }
+         function arttir3(){
+         
+         var sonuc=document.getElementById("sonuc3");
+         sonuc.value=Number(sonuc.value)+1;
+         }
+          
+         function azalt3(){
+          
+         var sonuc=document.getElementById("sonuc3");
+         sonuc.value=Number(sonuc.value)-1;
+         }
+                     
+
+     
+
+         const ad=document.querySelector("#ad");
+    const soyad=document.querySelector("#soyad");
+    const sınıf=document.querySelector("#sınıf");
+    const not=document.querySelector("#not");
+    const degistir=document.querySelector("#degistir");
+    const liste=document.querySelector("#liste");
+ 
+    ekle.onclick=function(){
+        let tAd=document.createElement("td");
+      let tSoyad=document.createElement("td");
+      let tSınıf=document.createElement("td");
+      let tNot=document.createElement("td");
+      let tDegistir=document.createElement("td");
+      
+ 
+      tAd.textContent=ad.value;
+      tSoyad.textContent=soyad.value;
+      tSınıf.textContent=sınıf.value;
+      tNot.textContent=not.value;
+      tDegistir.textContent=degistir.value;
+ 
+     
+      let tr=document.createElement("tr");
+ 
+      
+      tr.appendChild(tAd);
+      tr.appendChild(tSoyad);
+      tr.appendChild(tSınıf);
+      tr.appendChild(tNot);
+      tr.appendChild(tDegistir);
+ 
+      
+      liste.appendChild(tr);
+ 
+      
+      ad.value="";
+      soyad.value="";
+      sınıf.value="";
+      not.value="";
+      degistir.value="";
+ 
+      
+      ad.focus();
+    }
+  
+
+
+               
+                
+</script>
+    
+</body>
+    </html>

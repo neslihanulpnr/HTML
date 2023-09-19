@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oyun</title>
+     <style>
+        body{
+background-color: #333; 
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;  
+}
+
+.container{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap; 
+max-width: 25rem;
+}
+
+.square{
+background-color: #111;
+height: 1rem;
+width: 1rem;
+margin: 2px;
+box-shadow: 0 0 2px #000;
+transition: 2s ease;
+}
+
+.square:hover{
+transition-duration: 0s;
+background-color: l;
+}
+     </style>
+</head> 
+
+<body>
+<div class="container" id="container"></div> 
+
+<script>
+    const container = document.getElementById('container');
+
+const colors = ['#Be44ad', 'lightcoral' , '#3498ad', 'cadetblue', 'hotpink', 'lightgreen', 'lightblue', 'pink', 'purple'];
+const SQUARE = 500
+
+for(let i=0; i < SQUARE; i++) {
+   const square = document.createElement('div');
+
+   square.setAttribute("id", i);
+   square.classList.add('square');
+ 
+   container.appendChild(square);
+
+   square.addEventListener('mouseover', () => setColor(square));
+   square.addEventListener('mouseout', () => removeColor(square));
+}
+  
+function setColor(div) {
+   const randomColor = getRandomColor()
+   div.style.backgroundColor = randomColor
+   div.style.boxShadow = `0 0 2px ${randomColor}, 0 0 10px ${randomColor}`    
+}
+
+function getRandomColor(){
+   return colors[Math.floor(Math.random() * colors.length)]
+}
+
+function removeColor(div) {
+   div.style.backgroundColor = '#111'
+   div.style.boxShadow = '0 0 2px #000'
+}
+
+const allSquares = document.querySelectorAll('.square'); 
+
+allSquares.forEach((element, square) => {
+    element.addEventListener('click', () => {
+        console.log('kareye tıklandı - ' + (square + 1));
+        const randomColor = getRandomColor ();
+        element.style.backgroundColor = randomColor
+        element.style.boxShadow = `0 0 10px ${randomColor}`;
+    });
+});
+
+</script>
+</body>
+</html>  

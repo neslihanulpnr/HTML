@@ -1,0 +1,20 @@
+let sinav1 = document.getElementById('sinav1');
+let sinav2 = document.getElementById('sinav2');
+let sinav3 = document.getElementById('sinav3');
+let sonuc = document.getElementById('sonuc');
+
+function hesapla (){
+let s1 = Number(sinav1.value);
+let s2 = Number(sinav2.value);
+let s3 = Number(sinav3.value);
+
+let ortalama = (s1 + s2 + s3) / 3
+
+if( ortalama > 49.5)
+sonuc.innerHTML = "Ortalama : " + ortalama + "- Geçtin"
+else
+sonuc.innerHTML = "Ortalama : " + ortalama + "- Kaldın"
+}
+
+let hesaplaBtn = document.getElementById('hesapla');
+hesaplaBtn.onclick = hesapla;

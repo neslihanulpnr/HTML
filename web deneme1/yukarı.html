@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yukarı çık</title>
+   <style>
+body{
+background-color: cadetblue;
+height: 4000px;
+}
+
+.yukari_cik{
+display: none;
+width: 90px;
+height: 90px;
+background-color: brown;
+text-align: center;
+border-radius: 50%;
+line-height: 80px;
+font-size: 20px;
+right: 15px;
+bottom: 15px;
+position: fixed;
+}
+
+.yukari_cik:hover{
+cursor: pointer;
+background-color: darkred;    
+}
+
+.goster{
+display: block;  
+}
+
+.kaybol{
+display: none;    
+}
+   </style>
+</head>
+<body>
+<a class="yukari_cik">Yukarı</a>   
+<script>
+let yukari = document.getElementsByClassName('yukari_cik')[0];
+
+window.addEventListener('scroll', function(){
+const mesafe = window.scrollY
+if(mesafe > 300){
+yukari.classList.add('goster');
+}else{
+yukari.classList.remove('goster');
+}    
+});
+
+yukari.addEventListener('click', function(){
+window.scrollTo(0, 0);    
+})
+</script>    
+</body>
+</html>
