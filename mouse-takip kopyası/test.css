@@ -1,0 +1,11 @@
+body {
+    background: #3C3741;
+}
+
+#kutu {
+    background: cadetblue;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+}
