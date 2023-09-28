@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+  text-align: center;
+  background-color: lightgoldenrodyellow;
+  font-size: 50px;
+}
+
+.h2 {
+  font-size: 50px;
+}
+
+.d1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: firebrick;
+  margin-left: 850px;
+}
+
+.d2 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: crimson;
+  margin-left: 850px;
+}
+
+.b1 {
+  width: 200px;
+  height: 100px;
+  background-color: lemonchiffon;
+  margin-top: 20px;
+  border-radius: 30px;
+}
+
+.b2 {
+  width: 200px;
+  height: 100px;
+  background-color: lemonchiffon;
+  margin-top: 20px;
+  border-radius: 30px;
+}
+
+    </style>
+</head>
+
+<body>
+<div id="content">
+<h2><i>Eleman Gösterme-Gizleme</i></h2>
+<div class="d1"></div>
+<div class="d2"></div>
+<div id="button">
+<button class="b1">Göster</button>
+<button class="b2">Gizle</button>
+</div>
+</div>    
+
+ <script>
+    let b1 = document.getElementsByClassName('b1')[0];
+let b2 = document.getElementsByClassName('b2')[0];
+let d1 = document.getElementsByClassName('d1')[0];
+let d2 = document.getElementsByClassName('d2')[0];
+
+b1.addEventListener('click', goster)
+function goster (){
+d1.style.display = 'block'
+}
+
+b2.addEventListener('click', gizle)
+function gizle(){
+d1.style.display = 'none'    
+}
+ 
+ </script> 
+</body>
+</html>

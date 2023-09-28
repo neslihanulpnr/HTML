@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sayı toplama</title>
+    <style>
+        *{
+            background-color: cornflowerblue;
+        }
+        .html{
+            height: 190px;
+            width: 330px;
+            margin-top: 30px;
+            background-color: rgb(234, 238, 225);
+            margin-bottom: 80px;
+            margin-left: 100px;
+        }
+
+        .js{
+            height: 270px;
+            width: 400px;
+            background-color: rgb(234, 238, 225);
+            margin-top: 100px;       
+            margin-left: 100px;
+        }
+
+        .s1{
+            margin-left: 400px;
+        }
+
+        .h1{
+            margin-left: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="h1">Javascript İki Sayı Arasındaki Sayıları Toplama </h1>
+    
+    <label class="s1">1. sayı: </label>
+    <input type="number" id="sayi1">
+    <label>2. sayı : </label>
+    <input type="number" id="sayi2">
+
+    <button id="buton">Hesapla</button>
+
+    <div id="sonuc"></div>
+    
+<script>
+let sayi1 = document.getElementById('sayi1');
+let sayi2 = document.getElementById('Sayi2');
+ 
+function hesapla(){
+let toplam = 0;
+let s1 = Number(sayi1.value);
+let s2 = Number(sayi2.value);
+
+for (var i=s1; i<=s2; i++){
+toplam = toplam + i;
+}
+document.getElementById("sonuc").innerHTML = "Toplam : " + toplam;
+}
+let hesaplaBtn = document.getElementById('buton');
+hesaplaBtn.onclick = hesapla;
+</script>
+<textarea class="html">
+              HTML kodu 
+
+    <label>1. sayı: </label>
+    <input type="number" id="sayi1">
+    <label>2. sayı : </label>
+    <input type="number" id="sayi2">
+
+    <button id="buton">Hesapla</button>
+
+    <div id="sonuc"></div>
+</textarea>
+
+<textarea class="js">
+      javascript kodu
+
+  let sayi1 = document.getElementById('sayi1');
+  let sayi2 = document.getElementById('Sayi2');
+  function hesapla(){
+  let toplam = 0;
+  let s1 = Number(sayi1.value);
+  let s2 = Number(sayi2.value);
+  for (var i=s1; i<=s2; i++){
+  toplam = toplam + i;
+  }
+  document.getElementById("sonuc").innerHTML =   "Toplam : " + toplam;
+  }
+let hesaplaBtn = document.getElementById('buton');
+hesaplaBtn.onclick = hesapla;
+</textarea>
+</div> 
+</body>
+</html>
