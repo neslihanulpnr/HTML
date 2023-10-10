@@ -1,0 +1,28 @@
+*{
+    text-align: center;
+    background-color: cadetblue;
+}
+
+.p{
+    font-size: 40px;
+    font-weight: 40px;
+    margin-top: 300px;
+}
+
+.btn-increase{
+    background-color: brown;
+    font-size: 30px;
+    font-weight: 20px;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+}
+
+.btn-decrease{
+    background-color: brown;
+    font-size: 30px;
+    font-weight: 20px;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+}

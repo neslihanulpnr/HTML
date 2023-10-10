@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: lightpink;
+}
+
+.container .navbar{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 50px;
+}
+ 
+.logo{
+    font-size: 50px;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+#inputText{
+    border-radius: 50px;
+    border: 1px solid black;
+    width: 200px;
+    height: 40px;
+}
+
+#addToDo{
+    border-radius: 50px;
+    border: 1px solid black;
+    width: 90px;
+    height: 40px;
+    cursor: pointer;
+    outline: none;
+}
+
+#addToDo:active{
+    background-color: lightblue;
+}
+
+#clearToDo{
+    border-radius: 50px;
+    border: 1px solid black;
+    width: 90px;
+    height: 40px;
+    cursor: pointer;
+    outline: none;
+}
+
+#clearToDo:active{
+    background-color: lightblue;
+}
+
+.paragraph-styling{
+    margin-left: 800px;
+    cursor: pointer;
+    font-size: 35px;
+    text-transform: capitalize;
+    color: black;
+}
+
+.to-dos{
+    margin-top: 25px;
+}
+
+
+
+
+
+
+
+
+
+

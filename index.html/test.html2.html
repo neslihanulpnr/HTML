@@ -1,0 +1,225 @@
+<!DOCTYPE html<>
+<html lang>  
+         <head>
+<meta charset="utf-8">
+<title>İKİNCİ HTML DENEMEM</title>
+        </head>   
+<body>
+<span>bunu span etiketiyle yazdım</span>
+<div>bunu div etiketi ile yazdım</div>
+
+<p>bunu p etiketiyle yazdım</p>
+<h3>bunu h3 etiketiyle yazdım h etiketi başlık etiketi</h3>
+
+ <p>
+ben<b> neslihan bunu b etiketiyle </b>yazdım <br>
+ben<strong> bunu strong etiketi ile yazdım </strong> <br>
+<i> bunu i etiketi ile yazdım </i> <br>
+<em> bunu em etiketi ile yazdım</em> <br>
+<mark> bunu mark </mark> <br>
+<small> bunu small etiketi ile yazdım </small> <br>
+<s> bunu s etiketi ile yazdım </s> <br>
+<del> bunu del etiketi ile yazdım </del> <br>
+<ins> bunu ins etiketi ile yazdım </ins> <br>
+<u> bunu u etiketi ile yazdım </u> <br>
+h<sub>2</sub>o <br> 
+bunu<sub> sub etiketiyle </sub>yazdım
+ </p> 
+ 
+ <P>
+ web standartlarını <abbr title="World Wide Web Consurtium">W3C</abbr>belirler <br>  
+<q> etiketi ile tırnak içine alınır</q>
+</p>
+
+<p>victor hugoya göre hayat</p>
+<blockquote cite="https://guezelsoezler.com/hayat-ile-ilgili-soylenmis-guzel-sozler">
+hayat bir masala benzer uzunluğu değil iyi olup olmadığı önemlidir</blockquote>
+
+<p>
+    j.k. rowling tarafından yazılan <cite> harry potter </cite> 2002 yılında film old   
+</p>
+ 
+<a href="https://www.google.com/" target="_blank">buraya tıklayıp Google'a gidebilirsiniz</a> <br>
+
+<a href="#ders1">HTML dersleri 1</a>
+<a href="#ders2">HTML dersleri 2</a>
+
+<div id="ders1">
+abc <br>
+abc <br>
+abc <br>
+abc <br>
+</div>
+
+<div id="ders2">
+abc <br>
+abc <br>
+abc <br>
+abc <br>
+</div>
+
+<a rel="nofollow" href="https://erbilen.net" target="_blank">erbilen.net</a> <br>
+ 
+<img src="caroline.webp" width="500" title="caroline">
+
+<table>
+    <caption>aylık maaşım</caption>
+    <thead>
+        <tr>
+            <th>
+                ay
+            </th>
+            <th>
+                maaş
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+       <tr>
+        <td>
+             Ocak 
+            </td>
+        <td>
+            3500
+        </td>
+       </tr>
+       <tr>
+        <td>
+            Şubat
+        </td>
+        <td>
+            4000
+        </td>
+       </tr>
+       <tr>
+        <td>
+            Mart
+        </td>
+        <td>
+            3000
+        </td>
+       </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+           <td colspan="2">
+            Toplam=10.500
+           </td>  
+        </tr>
+    </tfoot>
+</table>
+ 
+<ul>
+    <li>
+        sabah 6 da kalk 
+    </li>
+    <li>
+        kahvaltı yap
+    </li>
+    <li>
+        egzersiz yap
+    </li>
+</ul>
+<ol type="I" start="3" > 
+    <li>
+        sabah 6 da kalk
+    </li>
+    <li>
+        kahvaltı Yap
+    </li>
+    <li>
+        egzesiz yap
+    </li> 
+</ol>
+
+<dl>
+    <dt>
+        youtube
+    </dt>
+    <dd><q>video paylaşım platformu</q></dd>
+</dl>
+
+<br><br><br>
+
+<form action="" method="get" id="form1" >
+<fieldset>
+  <legend> Giriş Yap</legend>  
+  <label for="kadi"> kullanıcı adı</label>
+  <input placeholder="kullanıcı adınızı girin" maxlength="10" type="text" id="kadi"> <br>
+  <label for="sifre">şifre</label> 
+  <input id="sifre" type="password"> <br>
+  <label for="eposta">e-posta</label>
+  <input type="email" id="eposta"> <br>
+  <button type="submit">Giriş yap</button>
+</fieldset>
+
+<input type="number" min="5" max="15" value="5"> <br>
+<input type="url"> <br> 
+<label for="dosya seç">Dosya seç</label>
+<input id="dosya" type="file" name="dosya[]" multiple accept="image/*"> <br>
+<label>
+    <input type="checkbox"> Kuralları Kabul Ediyorum. 
+</label><br>
+<label>
+    <input type="checkbox"> Kuralları Kabul Ediyorum.2
+</label> <br>
+<label>
+    <input type="radio" name="cinsiyet" value="erkek">Erkek
+</label>
+<label>
+    <input type="radio" name="cinsiyet" value="kadın">Kadın
+</label> <br>
+<input type="hidden" value="test" name="test"> 
+<input type="submit" value="Gönder">
+<input type="submit" formtarget="_blank" value="Gönder2">
+<input type="reset" value="sıfırla">
+</form>
+
+<br><br><br>
+ 
+<input type="color"> <br>
+<input type="date"> <br>
+<input type="datetime-local"> <br>
+<input type="month"> <br>
+<input type="week"> <br>
+<input type="email"> <br>
+<input type="source"> <br>
+<input type="tel"> <br>
+<input type="time"> <br>
+<input type="url"> <br>
+<input type="number" max="15" min="5"> <br>
+<input type="range" max="20" min="0" step="5"> <br>
+  
+<input type="text" name="kadi" autocapitalize="off"> <br><br>
+
+<input list="diiler" name="diller" form="form1">
+<datalist id="diller"></datalist>
+<option value="HTML">
+<option value="CSS">
+<option value="javascript">
+
+    <br><br>
+
+    <select name="dil[]" multiple size="7">
+        <optgroup label="front-end Dilleri">  
+              <option value="css">CSS</option>
+              <option selected value="css">HTML</option>
+              <option value="css">JS</option>
+        </optgroup>
+        
+        <optgroup label="Back-end Dilleri">
+             <option value="php">PHP</option>
+             <option value="js">JS</option>
+             <option value="python">Python</option>
+        </optgroup>
+  </select> <br><br>
+  
+  <textarea name=""   cols="30"     rows="20"></textarea>
+   
+  <button type="submit">Gönder</button>
+  
+  <br><br>
+
+</body>
+</html>
+

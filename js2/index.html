@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>js2</title>
+</head>
+
+<body>
+  <ul>
+    <li>
+        item 1
+        <button class="delete-btn">sil</button>
+    </li>
+    <li>
+        item 2
+        <button class="delete-btn">sil</button>
+    </li>
+    <li>
+        item 3
+        <button class="delete-btn">sil</button>
+    </li>
+    <li>
+        item 4
+        <button class="delete-btn">sil</button>
+    </li>
+    </ul>
+  <script>
+const ul = document.querySelector('ul')
+const deleteButtons = document.querySelectorAll('.delete-btn')
+//const deleteButtons = ul.children;
+
+console.log(
+    ul.firstElementChild
+);
+
+console.log(
+ ul.lastElementChild
+);
+
+deleteButtons.forEach(btn => {
+   btn.addEventListener('click', e => {
+    e.target.closest('li').remove()
+    if (ul.childElementCount == 0 ){
+        ul.innerHTML = 'gosterilecek veri bulunamadi'
+     } 
+   })
+})
+  </script>
+</body>
+
+</html>

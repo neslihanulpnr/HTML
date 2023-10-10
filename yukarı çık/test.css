@@ -1,0 +1,31 @@
+body{
+background-color: cadetblue;
+height: 4000px;
+}
+
+.yukari_cik{
+display: none;
+width: 90px;
+height: 90px;
+background-color: brown;
+text-align: center;
+border-radius: 50%;
+line-height: 80px;
+font-size: 20px;
+right: 15px;
+bottom: 15px;
+position: fixed;
+}
+
+.yukari_cik:hover{
+cursor: pointer;
+background-color: darkred;    
+}
+
+.goster{
+display: block;  
+}
+
+.kaybol{
+display: none;    
+}
